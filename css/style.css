@@ -1061,6 +1061,21 @@ input[type="radio"].visually-hidden {
   padding-bottom: 55px;
 }
 
+.map p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  margin: 0;
+}
+
+.map iframe {
+  position: relative;
+  z-index: 2;
+
+  border: none;
+}
+
 .info-btn {
   width: 260px;
 }
@@ -2115,4 +2130,48 @@ input[type="radio"].visually-hidden {
 .modal-write-us textarea:invalid:-ms-input-placeholder {
   color: #000000;
   opacity: 0.4;
+}
+
+@keyframes modal-open {
+  0% {
+    -webkit-transform: translate(-200%, -50%) skewX(45deg);
+        -ms-transform: translate(-200%, -50%) skewX(45deg);
+            transform: translate(-200%, -50%) skewX(45deg);
+  }
+  80% {
+    -webkit-transform: translate(-40%, -50%) skew(5deg);
+        -ms-transform: translate(-40%, -50%) skew(5deg);
+            transform: translate(-40%, -50%) skew(5deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) skew(0deg);
+        -ms-transform: translate(-50%, -50%) skew(0deg);
+            transform: translate(-50%, -50%) skew(0deg);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translate(-51%, -50%);
+        -ms-transform: translate(-51%, -50%);
+            transform: translate(-51%, -50%);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translate(-49%, -50%);
+        -ms-transform: translate(-49%, -50%);
+            transform: translate(-49%, -50%);
+  }
 }
