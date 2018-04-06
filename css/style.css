@@ -1057,23 +1057,7 @@ input[type="radio"].visually-hidden {
 
 .map {
   display: block;
-  padding-top: 10px;
-  padding-bottom: 55px;
-}
-
-.map p {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  margin: 0;
-}
-
-.map iframe {
-  position: relative;
-  z-index: 2;
-
-  border: none;
+  padding-bottom: 40px;
 }
 
 .info-btn {
@@ -1950,15 +1934,8 @@ input[type="radio"].visually-hidden {
   height: 560px;
   box-shadow: 0 10px 20px 0 rgba(0, 4, 6, 0.2);
   transform: translate(-50%, -50%);
+  z-index: 15;
 }
-
-/*.modal-map .modal-close {
-  opacity: 0.5;
-}
-
-.modal-map .modal-close:active {
-  opacity: 0.1;
-}*/
 
 .modal-show {
   display: block;

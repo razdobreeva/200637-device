@@ -6,6 +6,10 @@ var form = popup.querySelector("form");
 var email = popup.querySelector("[name=email]");
 var letter = popup.querySelector("[name=letter]");
 
+var map_link = document.querySelector(".map");
+var map_modal = document.querySelector(".modal-map");
+var map_close = map_modal.querySelector(".modal-close");
+
 var storage_username = localStorage.getItem("username");
 var storage_email = localStorage.getItem("email");
 
@@ -58,27 +62,12 @@ window.addEventListener("keydown", function (evt) {
   }
 });
 
-
-var mapLink = document.querySelector(".map");
-
-var mapPopup = document.querySelector(".modal-map");
-var mapClose = mapPopup.querySelector(".modal-close");
-
-mapLink.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  mapPopup.classList.add("modal-show");
+map_link.addEventListener("click", function(event) {
+  event.preventDefault();
+  map_modal.classList.add("modal-show");
 });
 
-mapClose.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  mapPopup.classList.remove("modal-show");
-});
-
-window.addEventListener("keydown", function (evt) {
-  evt.preventDefault();
-  if (evt.keyCode === 27) {
-    if (mapPopup.classList.contains("modal-show")) {
-      mapPopup.classList.remove("modal-show");
-    }
-  }
+map_close.addEventListener("click", function(event) {
+  event.preventDefault();
+  map_modal.classList.remove("modal-show");
 });
